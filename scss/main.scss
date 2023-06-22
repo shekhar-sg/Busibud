@@ -2,13 +2,6 @@
 @import "bootstrap/scss/bootstrap";
 @import "bootstrap-icons/font/bootstrap-icons.css";
 
-//.btn {
-//  padding: 16px 68px;
-//  margin-top: 8px;
-//  font-size: 22px;
-//  background-color: $primary;
-//}
-
 .navbar {
   @include media-breakpoint-down(sm) {
     width: 100%;
@@ -25,23 +18,34 @@
   }
 }
 
+.btn {
+  box-shadow: 0 16px 18px #00000029;
+  &:hover{
+    box-shadow: 10px 16px 8px #00000029;
+    background: #0dcaf0;
+  }
+}
+
+.button {
+  padding: 16px 68px;
+  margin-top: 8px;
+  font-size: 22px;
+  background-color: $primary;
+  @include media-breakpoint-down(lg) {
+    padding: 12px 38px;
+    margin-top: 8px;
+    font-size: 16px;
+
+  }
+}
+
 .section1 {
 
   .description {
     width: 550px;
     padding-top: 98px;
-
   }
 
-  @include media-breakpoint-down(sm) {
-    .description {
-      width: 100%;
-      padding-top: 30px;
-    }
-    .image {
-      padding-top: 30px;
-    }
-  }
   @include media-breakpoint-down(lg) {
     .description {
       width: 70%;
@@ -107,19 +111,6 @@
       }
     }
   }
-  //@include media-breakpoint-down(lg) {
-  //  .cards {
-  //    display: flex !important;
-  //    flex-direction: column;
-  //    row-gap: 14px;
-  //
-  //    .card {
-  //      display: flex !important;
-  //      flex-direction: row;
-  //      width: 100%;
-  //    }
-  //  }
-  //}
 }
 
 .section4 {
@@ -127,22 +118,22 @@
     .card {
       width: 100% !important;
       text-align: start;
-
-      .card-footer {
-        .btn {
-          padding: 12px 18px;
-          font-size: 16px;
-        }
-      }
     }
   }
 }
 
 .section5 {
   .card {
+    box-shadow: 0 3px 6px #00000029;
+
+    .card-header {
+      background: none;
+    }
+
     .card-body {
       width: 100%;
       top: 38%;
+
 
       .swiper {
         width: 86%;
@@ -168,6 +159,7 @@
     }
   }
 }
+
 
 .section6 {
   .companies {
